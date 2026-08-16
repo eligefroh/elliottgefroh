@@ -332,6 +332,14 @@ nav a:hover {
     margin-bottom: 110px;
 }
 
+.projects .section-heading {
+    background: #e8e8e5;
+
+    padding: 50px 60px;
+
+    border: 1px solid #d5d5d1;
+}
+
 .section-heading h2,
 .skills h2 {
     margin-top: 15px;
@@ -450,7 +458,7 @@ nav a:hover {
 
     width: 100%;
 
-    height: 320px;
+    aspect-ratio: 4 / 3;
 
     overflow: hidden;
 
@@ -465,7 +473,6 @@ nav a:hover {
 }
 
 .media-frame.large {
-    height: auto;
     aspect-ratio: 16 / 9;
 }
 
@@ -473,7 +480,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 
     cursor: zoom-in;
@@ -588,13 +595,16 @@ nav a:hover {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.project-gallery.two-images .media-frame,
+.project-gallery.two-images .media-frame {
+    aspect-ratio: 4 / 3;
+}
+
 .project-gallery.three-images .media-frame {
-    height: 330px;
+    aspect-ratio: 1 / 1;
 }
 
 .project-gallery.single-image .media-frame {
-    height: 500px;
+    aspect-ratio: 3 / 2;
 }
 
 
@@ -636,7 +646,7 @@ nav a:hover {
 }
 
 .helmet-gallery .media-frame {
-    height: 300px;
+    aspect-ratio: 4 / 3;
 }
 
 .pdf-frame {
@@ -732,11 +742,11 @@ nav a:hover {
 }
 
 .small-gallery .media-frame {
-    height: 250px;
+    aspect-ratio: 1 / 1;
 }
 
 .small-gallery.single-image .media-frame {
-    height: 300px;
+    aspect-ratio: 3 / 2;
 }
 
 .small-project-info {
@@ -775,7 +785,7 @@ nav a:hover {
 }
 
 .guitar-gallery .media-frame {
-    height: 300px;
+    aspect-ratio: 4 / 3;
 }
 
 
@@ -1039,6 +1049,10 @@ footer {
         display: block;
     }
 
+    .projects .section-heading {
+        padding: 35px 30px;
+    }
+
     .section-description {
         margin-top: 30px;
     }
@@ -1104,11 +1118,12 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .project-gallery .media-frame,
+    .project-gallery.two-images .media-frame,
+    .project-gallery.three-images .media-frame,
     .small-gallery .media-frame,
     .helmet-gallery .media-frame,
     .guitar-gallery .media-frame {
-        height: 300px;
+        aspect-ratio: 4 / 3;
     }
 
     .skills-grid {
